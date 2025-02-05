@@ -20,11 +20,11 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label class="form-label">Card #</label>
-                            <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX">
+                            <input type="text"  maxlength="16" class="form-control" oninput="this.value = this.value.replace(/\D/g, '')" placeholder="XXXXXXXXXXXXXXXX">
                         </div>
                         <div class="col-md-3">
                             <label class="form-label">CVC #</label>
-                            <input type="text" class="form-control" placeholder="0000">
+                            <input type="text" maxlength="3" class="form-control" oninput="this.value = this.value.replace(/\D/g, '')" placeholder="000">
                         </div>
                         <div class="col-md-3">
                             <label class="form-label">Amount</label>
@@ -67,19 +67,19 @@
                         <div class="d-flex flex-column">
                             <label class="form-label">We accept:</label>
                             <div class="border p-3 rounded bg-secondary d-flex gap-3">
-                                <input type="radio" class="btn-check" name="paymentMethod" id="mastercard" autocomplete="off">
+                                <input type="radio"  name="paymentMethod" id="mastercard" autocomplete="off">
                                 <label class="btn btn-outline-light" for="mastercard">
                                     <i class="fa-brands fa-cc-mastercard"></i>
                                 </label>
-                                <input type="radio" class="btn-check" name="paymentMethod" id="visa" autocomplete="off">
+                                <input type="radio" name="paymentMethod" id="visa" autocomplete="off">
                                 <label class="btn btn-outline-light" for="visa">
                                     <i class="fa-brands fa-cc-visa"></i>
                                 </label>
-                                <input type="radio" class="btn-check" name="paymentMethod" id="amazon-pay" autocomplete="off">
+                                <input type="radio" name="paymentMethod" id="amazon-pay" autocomplete="off">
                                 <label class="btn btn-outline-light" for="amazon-pay">
                                     <i class="fa-brands fa-cc-amazon-pay"></i>
                                 </label>
-                                <input type="radio" class="btn-check" name="paymentMethod" id="paypal" autocomplete="off">
+                                <input type="radio" name="paymentMethod" id="paypal" autocomplete="off">
                                 <label class="btn btn-outline-light" for="paypal">
                                     <i class="fa-brands fa-cc-paypal"></i>
                                 </label>
